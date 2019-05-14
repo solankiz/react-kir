@@ -1,0 +1,110 @@
+.combo-major {
+    position: relative;
+  }
+  .display-selected {
+    cursor: text;
+    width: 100%;
+    border: 1.5px solid #5897fb;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    zoom: 1;
+    background-image: linear-gradient(#eee 1%, #fff 15%);
+  }
+  .display-selected li.empty-input {
+    margin: 3px;
+  }
+  .display-selected li.empty-input input {
+    border: 0;
+    outline: 0;
+  }
+  .display-no-selected {
+    cursor: text;
+    width: 100%;
+    height: 24px;
+    border: 1px solid #aaa;
+    position: relative;
+    background-image: linear-gradient(#eee 1%, #fff 15%);
+  }
+  .display-no-selected span {
+    position: absolute;
+    top: 1px;
+    left: 7px;
+    opacity: 0.7;
+  }
+  .display-list {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    border: solid 1px #22a5ff;
+    z-index: 4;
+    width: 100%;
+    max-height: 120px;
+    overflow-y: auto;
+    background-color: white;
+  }
+  .toggle-list {
+    display: none;
+  }
+  ul, .selected-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul.outer-list-ul ul {
+    padding: 0;
+  }
+  ul.outer-list-ul li.outer-list-li {
+    cursor: context-menu;
+    font-weight: 700;
+    line-height: 22px;
+  }
+  ul.inner-ul li {
+    cursor: pointer;
+    font-weight: normal;
+  }
+  ul.inner-ul li span {
+    line-height: 22px;
+    margin-left: 10px;
+  }
+  ul.inner-ul li:not(.selected):hover {
+    color: white;
+    background-color: #22a5ff;
+  }
+  .selected {
+    opacity: 0.5;
+    cursor: context-menu !important;
+  }
+  ul.selected-ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul.selected-ul li.selected-li {
+    position: relative;
+    margin: 1.5px 2px;
+    padding: 5px 20px 3px 5px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    background-color: #e4e4e4;
+    background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);
+    background-clip: padding-box;
+    box-shadow: 0 0 2px #fff inset, 0 1px 0 rgba(0, 0, 0, 0.05);
+    color: #333;
+    line-height: 13px;
+    cursor: default;
+  }
+  ul.selected-ul li.selected-li span.cross-icon {
+    background-image: url("./clear.svg");
+    background-size: 15px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  ul.selected-ul li.selected-li span.cross-icon:hover {
+    opacity: 1;
+  }
+  

@@ -1,0 +1,35 @@
+{
+  "name": "react-kir",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/reactKir.umd.js",
+  "module": "dist/reactKir.es.js",
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "scripts": {
+    "build": "concurrently \"npm run build:es\" \"npm run build:umd\"",
+    "build:es": "cross-env NODE_ENV=es rollup --config",
+    "build:umd": "cross-env NODE_ENV=umd rollup --config",
+    "build:lib": "babel src -d lib"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.6.2",
+    "react-onclickoutside": "^6.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "concurrently": "^4.1.0",
+    "cross-env": "^5.2.0",
+    "rollup": "^1.11.3",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-terser": "^4.0.4"
+  }
+}
